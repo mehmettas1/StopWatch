@@ -1,8 +1,46 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background: linear-gradient(to right, #9cecfb,#65c7f7, #222280);
+    overflow: hidden;
+}
+.container{
+    margin: 50px auto;
+    text-align: center;
+}
+h1{
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
 body {
     text-align: center;
 
    }
 
-   .stopwatch-container div {
+   /* .stopwatch-container div {
        font-size: 4rem;
-   }
+   } */
+#timerDisplay {
+    font-size: 5em;
+    color: #ffff;
+}
+
+button{
+    border: none;
+    padding: 18px 10px;
+    font-size: 1.5em;
+    width: 180px;
+    margin: 10px;
+    border-radius: 15px;
+    color: #AA076B;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+    background-color:#aa0745;
+    color: black;
+    transition: 0.4s;
+    border: none;
+}
