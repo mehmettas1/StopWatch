@@ -1,7 +1,7 @@
 body{
     margin: 0%;
     padding: 0%;
-    background: linear-gradient(to right, #9cecfb,#65c7f7, #222280);
+    background: linear-gradient(to right, rgb(13, 44, 49), rgb(18, 128, 153));
     overflow: hidden;
 }
 .container{
