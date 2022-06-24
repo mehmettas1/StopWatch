@@ -22,8 +22,8 @@ body {
    /* .stopwatch-container div {
        font-size: 4rem;
    } */
-#timerDisplay {
-    font-size: 5em;
+p {
+    font-size: 5rem;
     color: #ffff;
 }
 

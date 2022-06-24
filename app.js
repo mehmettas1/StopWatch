@@ -13,53 +13,61 @@
 
 
 
-const pause = document.getElementById('pause');
+
 const start = document.getElementById('start');
 const reset = document.getElementById('reset');
 const timerDisplay = document.getElementById('timerDisplay');
-let millisecond = 0,
-second =0,
-minute =0,
-hour =0;
+const min = document.getElementById("mın")
+const sec = document.getElementById("sec")
+const ms = document.getElementById("ms")
+
+
+
+
 let loop;
 
 start.addEventListener('click',()=> {
-    clearInterval(loop);
-    loop = setInterval(counter,10);
+    if(start.innerText = "start"){
+        start.innerText = "stop";
+        clearInterval(loop);
+    loop = setInterval(counter, 1)
+     
+
+    }else {
+        clearInterval(loop);
+        start.innerText = "start"
+    }
    
 })
 
-pause.addEventListener('click',()=> {
-    
-    clearInterval(loop);
-})
 
 reset.addEventListener('click',()=> {
     
     clearInterval(loop);
-    (millisecond = 0), (second = 0), (minute = 0), (hour = 0);
-    timerDisplay.innerHTML = "00 : 00 : 00 : 000";
-})
+    ms.innerText = "00";
+    sec.innerText = "00";
+    min.innerText = "00"
+   
+});
 
 
 function counter(){
-    millisecond +=10;
-    if(millisecond ==1000){
-        millisecond =0;
-        second++;
+    ms.innerText ++;
+    if(ms.innerText==100){
+        ms.innerText ="00";
+        sec.innerText++;
 
-        if(second == 60) {
-            second = 0;
-            minute++;
+        if(sec.innerText == 60) {
+            sec.innerText = "00";
+            min.innerText++;
 
-            if(minute ==60){
-                minute = 0;
-                hour++;
-            }
+            
+            
         }
     }
 
-    timerDisplay.innerHTML = `${hour}:${minute} :${second}:${millisecond}`;
+    
    
 }
+
 
